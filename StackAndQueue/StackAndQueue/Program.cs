@@ -24,6 +24,8 @@ namespace StackAndQueue
             queueList.Enqueue(30);
             queueList.Enqueue(70);
             queueList.Display();
+            queueList.Dequeue();
+            queueList.Display();
             Console.ReadKey();
         }
     }

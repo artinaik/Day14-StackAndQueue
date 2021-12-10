@@ -26,6 +26,19 @@ namespace StackAndQueue
             }
             Console.WriteLine("Element {0} added to the linked list", node.data);
         }
+        public Node Dequeue()
+        {
+            Node temp=head;
+            if (temp == null)
+                Console.WriteLine("Queue is empty");
+            else
+            {
+                temp = temp.next;
+                head = temp;
+            }
+            Console.WriteLine("Element {0} is deleted from queue",head.data);
+            return head;
+        }
         public void Display()
         {
             Node temp = this.head;
