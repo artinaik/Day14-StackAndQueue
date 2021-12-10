@@ -40,14 +40,40 @@ namespace StackAndQueue
             else
             {
                 Node temp = top;
-                Console.Write("Elements in stack are :");
+                Console.WriteLine("Elements in stack are :");
                 while (temp != null)
                 {
-                    Console.Write(" " + temp.data);
+                    Console.WriteLine(" " + temp.data);
                     temp = temp.next;
                 }
+            }   
+        }
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
             }
-               
+            Console.WriteLine("{0} is in the top of the stack ", top.data);
+        }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Element popped is {0} ", top.data);
+            top = top.next;
+        }
+        public void IsEmpty()
+        {
+            while (top != null)
+            {
+                Peek();
+                Pop();
+            }
         }
     }
 }

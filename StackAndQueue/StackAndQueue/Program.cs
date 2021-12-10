@@ -16,6 +16,8 @@ namespace StackAndQueue
             stackList.Push(30);
             stackList.Push(56);
             stackList.Display();
+            stackList.IsEmpty();
+            stackList.Display();
             Console.ReadKey();
         }
     }
